@@ -192,6 +192,11 @@ nav li a {
   object-fit: cover;
   object-position: center;
   border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.card-image:hover {
+  transform: scale(1.05); /* zoom léger (5%) */
 }
 
 .quote {
