@@ -1,54 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing Page</title>
     <link rel="stylesheet" href="styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+</head>
+
+<body>
     <header>
-      <div class="header-inner">
-        <img
-          class="logo"
-          src="images/img-logo.png"
-          alt="Odin coding illustration"
-        />
-        <nav>
-          <ul class="secondary-text">
-            <li><a href="#">header link one</a></li>
-            <li><a href="#">header link two</a></li>
-            <li><a href="#">header link three</a></li>
-          </ul>
-        </nav>
-      </div>
+        <div class="header-inner inner">
+            <img class="logo" src="images/img-logo.png" alt="Odin coding illustration" />
+            <nav>
+                <ul class="secondary-text">
+                    <li><a href="#">header link one</a></li>
+                    <li><a href="#">header link two</a></li>
+                    <li><a href="#">header link three</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <section class="hero">
-      <div class="container">
-        <div class="hero-left">
-          <h1>This website is awesome</h1>
-          <p class="secondary-text">
-            This website has some subtext that goes here under the main title.
-            It's a smaller font and the color is lower contrast.
-          </p>
-          <a href="#" class="hero-button">Sign up</a>
+    <section class="section hero">
+        <div class="hero-inner inner">
+            <div class="hero-left">
+                <h1>This website is awesome</h1>
+                <p class="secondary-text">
+                    This website has some subtext that goes here under the main title.
+                    It's a smaller font and the color is lower contrast.
+                </p>
+                <a href="#" class="hero-button">Sign up</a>
+            </div>
+            <div class="hero-right">
+                <img class="hero-img" src="images/img-hero.png" alt="Odin coding illustration" />
+            </div>
         </div>
-        <div class="hero-right">
-          <img
-            class="hero-img"
-            src="images/img-hero.png"
-            alt="Odin coding illustration"
-          />
         </div>
-      </div>
     </section>
-    <!-- <section class="info"></section>
-    <section class="testimonial"></section>
-    <section class="cta"></section> -->
-  </body>
-  <!-- <footer /> -->
+
+    <section class="section info">
+        <div class="info-inner inner">
+            <h2>Some random information.</h2>
+            <div class="info-cards">
+                <div class="info-card">
+<img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Server room" class="card-image">
+ 
+<p>this is some subtext under an illustration or image</p>
+                </div>
+                <div class="info-card">
+                    <img src="https://images.unsplash.com/photo-1499914485622-a88fac536970?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Robot face" class="card-image">
+                    <p>this is some subtext under an illustration or image</p>
+                </div>
+                <div class="info-card">
+                    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=2855&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Laptop" class="card-image">
+                    <p>this is some subtext under an illustration or image</p>
+                </div>
+                <div class="info-card">
+                    <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Laptop" class="card-image">
+                    <p>this is some subtext under an illustration or image</p>
+                </div>
+            </div>
+    </section>
+
+    <section class="section quote">
+        <div class="quote-inner inner">
+            <p>
+                This is an inspiring quote, or a testimonial from a customer. Maybe
+                it’s just filling up space, or maybe people will actually read it. Who
+                knows? All I know is that it looks nice.
+            </p>
+            <p class="quote-author">-Thor, God of Thunder</p>
+        </div>
+    </section>
+
+    <section class="section cta">
+        <div class="cta-inner inner">
+            <div>
+                <h3>Call to action! It’s time!</h3>
+                <p>Sign up for our product by clicking that button right over there!</p>
+            </div>
+            <a href="#" alt="sign up">Sign up</a>
+        </div>
+        </div>
+    </section>
+
+    <footer>Copyright © The Odin Project 2021</footer>
+</body>
+
 </html>
