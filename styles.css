@@ -2,12 +2,17 @@
   --color-primary: #1f2937;
   --color-secondary: #e5e7eb;
   --color-title-secondary: #f9faf8;
+  --height-header: 60px;
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -23,6 +28,10 @@ h1 {
   margin-bottom: 30px;
 }
 
+button {
+  width: 100px;
+}
+
 header,
 footer {
   display: flex;
@@ -31,6 +40,18 @@ footer {
   background-color: var(--color-primary);
   color: var(--color-secondary);
   padding: 10px 0px;
+}
+
+footer {
+  justify-content: center;
+  padding: 20px;
+  font-size: 12px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  height: var(--height-header);
 }
 
 header .logo {
@@ -58,16 +79,39 @@ nav li a {
   color: var(--color-secondary);
 }
 
-.container {
+.section {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 80px 40px;
   gap: 20px;
 }
+
+.section > .hero-inner {
+  display: flex;
+  align-items: center;
+  margin-top: var(--height-header);
+}
+
+.section > .quote-inner {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+
+.section > .cta-inner {
+  display: flex;
+  background-color: #3b82f6;
+  color: white;
+  padding: 40px 60px;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inner {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
 .secondary-text {
   font-size: 18px;
   color: var(--color-secondary);
@@ -76,6 +120,8 @@ nav li a {
 .hero {
   color: var(--color-secondary);
   background-color: var(--color-primary);
+  justify-content: space-between;
+  align-items: center;
 }
 
 .hero-left {
@@ -117,6 +163,68 @@ nav li a {
   height: auto;
   object-fit: contain;
   border-radius: 8px;
+}
+
+.info {
+  text-align: center;
+}
+
+.info h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.info-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.info-card {
+  width: 100px;
+  text-align: center;
+}
+
+.card-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+}
+
+.quote {
+  background-color: #e5e7eb;
+  padding: 80px;
+  font-style: italic;
+  font-size: 20px;
+  color: var(--color-primary);
+}
+
+.quote-author {
+  text-align: right;
+  font-weight: bold;
+  font-style: normal;
+  margin-top: 20px;
+}
+
+.cta a {
+  background-color: #3b82f6;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.cta h3 {
+  color: var(--color-title-secondary);
+}
+
+.cta p {
+  margin-top: 5px;
+  color: var(--color-secondary);
 }
 
 @media (max-width: 768px) {
