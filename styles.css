@@ -181,6 +181,10 @@ nav li a {
   gap: 30px;
 }
 
+.info-card p {
+  color: var(--color-primary);
+}
+
 .info-card {
   width: 100px;
   text-align: center;
