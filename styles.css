@@ -3,6 +3,9 @@
   --color-secondary: #e5e7eb;
   --color-title-secondary: #f9faf8;
   --height-header: 60px;
+  --space-responsive-medium: 40px;
+  --space-responsive-small: 20px;
+  --color-cta: #3b82f6;
 }
 
 * {
@@ -20,16 +23,8 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-p {
-  margin: 20px 0px;
-}
-
 h1 {
   margin-bottom: 30px;
-}
-
-button {
-  width: 100px;
 }
 
 header,
@@ -52,20 +47,12 @@ header {
   position: fixed;
   width: 100%;
   height: var(--height-header);
+  top: 0;
+  padding: 0px var(--space-responsive-medium);
 }
 
 header .logo {
   height: 50px;
-}
-
-.header-inner {
-  width: 100%;
-  padding: 0px 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 nav ul {
@@ -77,32 +64,65 @@ nav ul {
 nav li a {
   text-decoration: none;
   color: var(--color-secondary);
+  font-weight: bold;
+  padding: 10px 0;
+  transition: color 0.3s ease;
+  position: relative;
 }
 
-.section {
+nav li a::after {
+  width: 0;
+  height: 2px;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-cta);
+  transition: width 0.3s ease;
+}
+
+nav li a:hover::after {
+  width: 100%;
+}
+
+section {
   width: 100%;
   padding: 80px 40px;
   gap: 20px;
 }
 
-.section > .hero-inner {
+section > .hero-inner {
   display: flex;
   align-items: center;
-  margin-top: var(--height-header);
 }
 
-.section > .quote-inner {
+section > .quote-inner {
   display: flex;
   flex-direction: column;
   max-width: 500px;
 }
 
-.section > .cta-inner {
+section > .cta-inner {
   display: flex;
   background-color: #3b82f6;
   color: white;
   padding: 40px 60px;
   border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button {
+  width: 150px;
+  text-align: center;
+  color: white;
+}
+
+.header-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
   justify-content: space-between;
   align-items: center;
 }
@@ -122,6 +142,7 @@ nav li a {
   background-color: var(--color-primary);
   justify-content: space-between;
   align-items: center;
+  margin-top: var(--height-header);
 }
 
 .hero-left {
@@ -142,14 +163,12 @@ nav li a {
 
 .hero-button {
   display: block;
-  width: fit-content;
-  background-color: #3882f6;
-  color: white;
+  background-color: var(--color-cta);
   padding: 12px 24px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  margin-bottom: 40px;
+  margin: 20px 0px;
 }
 
 .hero-right {
@@ -179,6 +198,7 @@ nav li a {
   display: flex;
   justify-content: center;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 .info-card p {
@@ -205,7 +225,6 @@ nav li a {
 
 .quote {
   background-color: #e5e7eb;
-  padding: 80px;
   font-style: italic;
   font-size: 20px;
   color: var(--color-primary);
@@ -214,12 +233,10 @@ nav li a {
 .quote-author {
   text-align: right;
   font-weight: bold;
-  font-style: normal;
-  margin-top: 20px;
 }
 
 .cta a {
-  background-color: #3b82f6;
+  background-color: var(--color-cta);
   color: white;
   border: 2px solid white;
   padding: 10px 20px;
@@ -236,18 +253,44 @@ nav li a {
   color: var(--color-secondary);
 }
 
+.hero-button:hover,
+.cta a:hover {
+  background-color: white;
+  color: var(--color-cta);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 @media (max-width: 768px) {
-  .header-inner {
-    flex-direction: column;
-    text-align: center;
+  header {
+    position: relative;
+    height: unset;
+    padding: 0px var(--space-responsive-small);
   }
-  .container {
+
+  section {
+    padding: 50px var(--space-responsive-small);
+  }
+  section.hero {
+    padding-top: 35px;
+  }
+
+  .header-inner.inner {
+    gap: 5px;
+  }
+
+  .hero-button {
+    margin: 20px auto;
+  }
+
+  .inner {
     flex-direction: column;
     text-align: center;
-    padding: 40px 20px;
     gap: 20px;
   }
 
+  .hero {
+    margin-top: unset;
+  }
   .hero-left,
   .hero-right {
     flex: none;
@@ -259,12 +302,15 @@ nav li a {
     font-size: 32px;
   }
 
-  .hero-button {
-    margin: auto;
-    margin-bottom: 20px;
-  }
-
   .hero-right .hero-img {
     max-width: 500px;
+  }
+  .cta-inner.inner {
+    padding: 20px;
+  }
+
+  .cta-inner.inner p {
+    margin-top: 15px;
+    margin-bottom: 0px;
   }
 }
